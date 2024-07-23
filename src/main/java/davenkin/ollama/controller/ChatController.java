@@ -12,7 +12,7 @@ import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.RestController;
 
 @RestController
-@RequestMapping(path = "/chat")
+@RequestMapping
 public class ChatController {
 
   private final ChatService chatService;
@@ -23,7 +23,7 @@ public class ChatController {
     this.vectorStore = vectorStore;
   }
 
-  @GetMapping
+  @GetMapping(value = "/chat")
   public Map<String, String> chat(@RequestParam(name = "question") String question) {
     return Map.of("answer", this.chatService.answerFor(question));
   }

@@ -2,8 +2,11 @@
 - Demo project using Spring AI and Ollama.
 
 ### How to run
-- `./mvnw spring-boot:run` and open `http://localhost:8080/hello-world`
-- Or run `main()` in `SpringAiOllamaDemoApplication` in IDE directly
+- Install [Ollama](https://ollama.com/) and run `ollama run llama3`
+- Run `./mvnw spring-boot:run` or run `main()` in `SpringAiOllamaDemoApplication` in IDE directly
+- Open `GET http://localhost:8080/hello-world` to verify if the application started normally
+- Use `GET http://localhost:8080/chat/upload?data=xxxx` to upload context data
+- Use `GET http://localhost:8080/chat/chat?question=xxx` to ask question
 
 ### Tech stack
 - Spring Boot 3.3.2
