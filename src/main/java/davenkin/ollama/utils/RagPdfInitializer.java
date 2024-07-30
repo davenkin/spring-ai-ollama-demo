@@ -20,7 +20,7 @@ public class RagPdfInitializer {
     this.pdfResource = pdfResource;
   }
 
-  @PostConstruct
+//  @PostConstruct
   public void init() {
     PagePdfDocumentReader documentReader = new PagePdfDocumentReader(pdfResource);
     TokenTextSplitter tokenTextSplitter = new TokenTextSplitter();
